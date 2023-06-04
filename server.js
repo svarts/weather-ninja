@@ -1,14 +1,15 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-console.log("rfrgergerge");
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
-app.get('/styles.css', (req, res) => {
-  res.sendFile(__dirname + '/styles.css');
+app.get('/css/:filename', (req, res) => {
+  const { filename } = req.params;
+  const filePath = path.join(__dirname, './css', filename);
+  res.sendFile(filePath);
 });
 
 app.get('/scripts/:filename', (req, res) => {

@@ -5,19 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
     <title>Ninja Weather</title>
 </head>
 <body>
-    
+    <div icon="sunny" data-label="Sunny">
+        <span class="sun"></span>
+    </div>
     <div class="container my-5 mx-auto">
         <h1 class="text-muted text-center my-4">NinjaWeather</h1>
-
         <form action="" class="change-location my-4 text-center">
             <label for="city">Enter a location for weather information</label>
             <input type="text" name="city" class="form-control p-4">
         </form>
-
         <div class="card shadow-lg rounded">
             <img src="https://placehold.co/400x300" class="time card-img-top">
             <div class="icon bg-light mx-auto text-center">
@@ -33,7 +34,42 @@
             </div>
         </div>
     </div>
-
+    <div icon="cloudy" data-label="Perfect">
+        <span class="cloud"></span>
+        <span class="cloud"></span>
+    </div>
+    <div icon="snowy" data-label="Chilly">
+        <span class="snowman"></span>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+    </div>
+    <div icon="stormy" data-label="Soggy">
+        <span class="cloud"></span>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+    </div>
+    <div icon="supermoon" data-label="Cool!">
+        <span class="moon"></span>
+        <span class="meteor"></span>
+    </div>
     <script src="scripts/forecast.js"></script>
     <script src="scripts/app.js"></script>
 </body>
