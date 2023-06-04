@@ -19,6 +19,18 @@ app.get('/scripts/:filename', (req, res) => {
   res.sendFile(filePath);
 });
 
+app.get('/img/:filename', (req, res) => {
+  const { filename } = req.params;
+  const filePath = path.join(__dirname, './img', filename);
+  res.sendFile(filePath);
+});
+
+app.get('/icons/:filename', (req, res) => {
+  const { filename } = req.params;
+  const filePath = path.join(__dirname, './icons', filename);
+  res.sendFile(filePath);
+});
+
 /* app.get('/js/:filename', (req, res) => {
   const { filename } = req.params;
   const filePath = path.join(__dirname, './scripts' + filename);
