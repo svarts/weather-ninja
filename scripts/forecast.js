@@ -10,7 +10,7 @@ class Forecast{
         //object shorthand notation
         return { cityDets, weather };
     }
-    async getCity(){
+    async getCity(city){
         const query = `?apikey=${this.key}&q=${city}`;
         const response = await fetch(this.cityURI + query);
         const data = await response.json();
